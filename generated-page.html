@@ -1,0 +1,545 @@
+<html lang="vi" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZINESS PRODUCTION | Video Booth 360 &amp; Bục Xoay 360 Độ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+        .text-glow { text-shadow: 0 0 20px rgba(168, 85, 247, 0.5); }
+        .shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite linear;
+        }
+        @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+        .rotate-slow { animation: spin 10s linear infinite; }
+        @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        /* Hide scrollbar for gallery */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-black text-zinc-300 antialiased selection:bg-purple-500 selection:text-white relative bg-grid overflow-x-hidden">
+
+    <!-- Gradient Orbs Background -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-1/2 h-1/2 bg-purple-900/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-1/2 h-1/2 bg-blue-900/20 rounded-full blur-[120px]"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 left-0 border-b border-white/5 bg-black/70 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="text-xl tracking-tight font-medium text-white flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-blue-500 flex items-center justify-center text-xs font-bold">Z</div>
+                ZINESS
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+                <a href="#services" class="hover:text-white transition-colors">Dịch vụ</a>
+                <a href="#product" class="hover:text-white transition-colors">Sản phẩm</a>
+                <a href="#projects" class="hover:text-white transition-colors">Dự án</a>
+                <a href="#blog" class="hover:text-white transition-colors">Blog</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <div class="hidden lg:flex flex-col items-end text-xs leading-tight">
+                    <span class="text-zinc-500">Hotline 24/7</span>
+                    <span class="text-white font-medium tracking-wide">079 359 2018</span>
+                </div>
+                <a href="#quote" class="bg-white text-black text-sm font-medium px-4 py-2 rounded-full hover:bg-zinc-200 transition-colors">
+                    Nhận báo giá
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Abstract Rotating Ring BG -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/5 rounded-full rotate-slow pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/5 rounded-full rotate-slow pointer-events-none" style="animation-direction: reverse;"></div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs mb-8 uppercase tracking-widest font-medium">
+                <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse"></span>
+                Ziness Production
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter text-white mb-6 leading-tight">
+                VIDEO BOOTH <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 animate-gradient bg-300% text-glow">360 ĐỘ CINEMATIC</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Giải pháp quay video 360 chuyên nghiệp cho YEP, Gala, Wedding, Bar &amp; Activation. 
+                <span class="text-zinc-200">Khuấy động sự kiện, bắt trọn khoảnh khắc.</span>
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#quote" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-medium rounded-full hover:scale-105 transition-transform flex items-center justify-center gap-2 group">
+                    Nhận báo giá ngay
+                    <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+                <button class="w-full sm:w-auto px-8 py-4 border border-zinc-700 bg-zinc-900/50 backdrop-blur text-white font-medium rounded-full hover:bg-zinc-800 transition-colors flex items-center justify-center gap-2">
+                    <iconify-icon icon="solar:play-circle-linear" width="20"></iconify-icon>
+                    Xem Demo Video
+                </button>
+            </div>
+
+            <!-- Stats/Floating Badges -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-8 max-w-4xl mx-auto">
+                <div>
+                    <div class="text-2xl md:text-3xl font-medium text-white tracking-tight">+100</div>
+                    <div class="text-xs text-zinc-500 uppercase tracking-wide mt-1">Sự kiện đã làm</div>
+                </div>
+                <div>
+                    <div class="text-2xl md:text-3xl font-medium text-white tracking-tight">Hà Nội &amp; HCM</div>
+                    <div class="text-xs text-zinc-500 uppercase tracking-wide mt-1">Phủ sóng toàn quốc</div>
+                </div>
+                <div>
+                    <div class="text-2xl md:text-3xl font-medium text-white tracking-tight">4K/120fps</div>
+                    <div class="text-xs text-zinc-500 uppercase tracking-wide mt-1">Chất lượng Video</div>
+                </div>
+                <div>
+                    <div class="text-2xl md:text-3xl font-medium text-white tracking-tight">Instant</div>
+                    <div class="text-xs text-zinc-500 uppercase tracking-wide mt-1">Lấy video ngay</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="py-20 md:py-32 bg-zinc-900/30 border-y border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-medium text-white tracking-tight mb-4">Chúng tôi là ai?</h2>
+            <p class="text-zinc-400 max-w-3xl mx-auto text-lg leading-relaxed">
+                <strong class="text-white">ZINESS PRODUCTION</strong> là đơn vị tiên phong cung cấp giải pháp hình ảnh tương tác công nghệ cao. 
+                Chúng tôi chuyên <span class="text-purple-400">Cho thuê Video Booth 360</span> trọn gói và 
+                <span class="text-blue-400">Bán bục xoay 360 độ</span> thông minh. Biến mọi sự kiện trở thành sân khấu trình diễn ánh sáng và chuyển động.
+            </p>
+        </div>
+    </section>
+
+    <!-- Video Gallery (Grid) -->
+    <section class="py-20 bg-black relative" id="gallery">
+        <div class="container mx-auto px-6 mb-12 flex items-end justify-between">
+            <div>
+                <h3 class="text-purple-500 text-sm font-medium tracking-widest uppercase mb-2">Portfolio</h3>
+                <h2 class="text-3xl md:text-5xl font-medium text-white tracking-tight">Video Demo 360</h2>
+            </div>
+            <a href="#" class="hidden md:flex items-center gap-1 text-sm text-zinc-400 hover:text-white transition-colors">
+                Xem tất cả <iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon>
+            </a>
+        </div>
+
+        <!-- Marquee/Slider Wrapper -->
+        <div class="flex overflow-x-auto gap-4 px-6 no-scrollbar snap-x">
+            <!-- Video Card 1 -->
+            <div class="min-w-[80vw] md:min-w-[400px] aspect-[9/16] bg-zinc-800 rounded-2xl relative overflow-hidden group cursor-pointer snap-center border border-white/10">
+                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" alt="Party" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:play-linear" class="text-white text-3xl ml-1"></iconify-icon>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black to-transparent">
+                    <div class="text-white font-medium text-lg">Year End Party 2023</div>
+                    <div class="text-zinc-400 text-sm">Techcombank Hanoi</div>
+                </div>
+            </div>
+
+             <!-- Video Card 2 -->
+             <div class="min-w-[80vw] md:min-w-[400px] aspect-[9/16] bg-zinc-800 rounded-2xl relative overflow-hidden group cursor-pointer snap-center border border-white/10">
+                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg" alt="Wedding" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:play-linear" class="text-white text-3xl ml-1"></iconify-icon>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black to-transparent">
+                    <div class="text-white font-medium text-lg">Luxury Wedding</div>
+                    <div class="text-zinc-400 text-sm">White Palace HCM</div>
+                </div>
+            </div>
+
+             <!-- Video Card 3 -->
+             <div class="min-w-[80vw] md:min-w-[400px] aspect-[9/16] bg-zinc-800 rounded-2xl relative overflow-hidden group cursor-pointer snap-center border border-white/10">
+                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&amp;w=1000&amp;auto=format&amp;fit=crop" alt="Bar" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <iconify-icon icon="solar:play-linear" class="text-white text-3xl ml-1"></iconify-icon>
+                    </div>
+                </div>
+                <div class="absolute bottom-0 left-0 p-6 w-full bg-gradient-to-t from-black to-transparent">
+                    <div class="text-white font-medium text-lg">Grand Opening Bar</div>
+                    <div class="text-zinc-400 text-sm">1900 Le Theatre</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services & Pricing -->
+    <section class="py-24 bg-zinc-900/20" id="services">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-medium text-white tracking-tight mb-4">Gói dịch vụ thuê 360 Booth</h2>
+                <p class="text-zinc-400">Chọn giải pháp phù hợp nhất cho quy mô sự kiện của bạn</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Basic -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:border-zinc-600 transition-colors relative">
+                    <h3 class="text-xl font-medium text-white mb-2">Basic Package</h3>
+                    <p class="text-sm text-zinc-500 mb-6">Phù hợp tiệc sinh nhật, party nhỏ</p>
+                    <div class="text-3xl font-medium text-white mb-6 tracking-tight">Liên hệ</div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-sm text-zinc-300">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5 shrink-0"></iconify-icon>
+                            Máy quay GoPro 10/11
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-zinc-300">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5 shrink-0"></iconify-icon>
+                            Kỹ thuật viên hỗ trợ
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-zinc-300">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5 shrink-0"></iconify-icon>
+                            Template overlay cơ bản
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-zinc-300">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5 shrink-0"></iconify-icon>
+                            Trả video qua QR Code
+                        </li>
+                    </ul>
+                    <a href="#quote" class="block w-full py-3 border border-zinc-700 rounded-xl text-center text-sm font-medium text-white hover:bg-white hover:text-black transition-colors">Nhận báo giá</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="bg-zinc-900 border border-purple-500/50 rounded-3xl p-8 relative shadow-[0_0_30px_rgba(168,85,247,0.1)]">
+                    <div class="absolute top-0 right-0 bg-purple-500 text-white text-[10px] uppercase font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl">Phổ biến nhất</div>
+                    <h3 class="text-xl font-medium text-white mb-2 text-purple-400">Pro Package</h3>
+                    <p class="text-sm text-zinc-500 mb-6">Tối ưu cho Wedding, Year End Party</p>
+                    <div class="text-3xl font-medium text-white mb-6 tracking-tight">Best Value</div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-sm text-white">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-purple-500 mt-0.5 shrink-0"></iconify-icon>
+                            Tất cả tính năng Basic
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-white">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-purple-500 mt-0.5 shrink-0"></iconify-icon>
+                            Thiết kế Overlay &amp; Intro/Outro riêng
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-white">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-purple-500 mt-0.5 shrink-0"></iconify-icon>
+                            Đèn trợ sáng chuyên nghiệp
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-white">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-purple-500 mt-0.5 shrink-0"></iconify-icon>
+                            Props (phụ kiện) vui nhộn
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-white">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-purple-500 mt-0.5 shrink-0"></iconify-icon>
+                            iPad Sharing Station
+                        </li>
+                    </ul>
+                    <a href="#quote" class="block w-full py-3 bg-purple-600 rounded-xl text-center text-sm font-medium text-white hover:bg-purple-500 transition-colors shadow-lg shadow-purple-900/20">Nhận báo giá ngay</a>
+                </div>
+
+                <!-- Premium -->
+                <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 hover:border-zinc-600 transition-colors relative">
+                    <h3 class="text-xl font-medium text-white mb-2">Premium Package</h3>
+                    <p class="text-sm text-zinc-500 mb-6">Sự kiện Brand, Launching sản phẩm</p>
+                    <div class="text-3xl font-medium text-white mb-6 tracking-tight">VIP</div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-sm text-zinc-300">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5 shrink-0"></iconify-icon>
+                            Thiết kế Booth 360 Custom 100%
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-zinc-300">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5 shrink-0"></iconify-icon>
+                            Hiệu ứng Slow-mo Cinematic cao cấp
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-zinc-300">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5 shrink-0"></iconify-icon>
+                            TV màn hình lớn trình chiếu live
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-zinc-300">
+                            <iconify-icon icon="solar:check-circle-linear" class="text-zinc-500 mt-0.5 shrink-0"></iconify-icon>
+                            Data collection (thu thập Lead)
+                        </li>
+                    </ul>
+                    <a href="#quote" class="block w-full py-3 border border-zinc-700 rounded-xl text-center text-sm font-medium text-white hover:bg-white hover:text-black transition-colors">Liên hệ tư vấn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section (Sell) -->
+    <section class="py-24 bg-black border-y border-zinc-800" id="product">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 relative">
+                    <!-- Product Glow -->
+                    <div class="absolute inset-0 bg-blue-500/20 blur-[100px] rounded-full"></div>
+                    <div class="relative bg-zinc-900 rounded-3xl overflow-hidden border border-zinc-800 aspect-square flex items-center justify-center group">
+                        <!-- Placeholder for Product Image -->
+                         <div class="w-2/3 h-2/3 rounded-full border-4 border-zinc-700 flex items-center justify-center relative shadow-[0_0_50px_rgba(59,130,246,0.3)] group-hover:shadow-[0_0_80px_rgba(59,130,246,0.5)] transition-shadow duration-500">
+                             <div class="w-4 h-4 bg-blue-500 rounded-full absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-[0_0_20px_#3b82f6]"></div>
+                             <div class="w-3/4 h-[2px] bg-zinc-700 rotate-45"></div>
+                             <div class="text-zinc-500 text-xs font-mono absolute bottom-4">ZINESS 360 PLATFORM</div>
+                         </div>
+                         <div class="absolute bottom-6 right-6 flex gap-2">
+                             <span class="px-2 py-1 bg-zinc-800 rounded text-[10px] text-zinc-400 border border-zinc-700">100cm</span>
+                             <span class="px-2 py-1 bg-zinc-800 rounded text-[10px] text-zinc-400 border border-zinc-700">Remote</span>
+                         </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h3 class="text-blue-500 text-sm font-medium tracking-widest uppercase mb-2">Sản phẩm</h3>
+                    <h2 class="text-4xl lg:text-5xl font-medium text-white tracking-tight mb-6">Mua bục xoay 360 độ <br>Chính hãng Ziness</h2>
+                    <p class="text-zinc-400 text-lg mb-8 leading-relaxed">
+                        Thiết bị hoàn hảo cho các đơn vị làm sự kiện, studio, hoặc cho thuê. Động cơ êm ái, điều khiển từ xa, chịu tải trọng lớn và độ bền cao.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 mb-10">
+                        <div>
+                            <div class="text-white font-medium mb-1">Cực kỳ ổn định</div>
+                            <p class="text-sm text-zinc-500">Chống rung lắc, video mượt mà.</p>
+                        </div>
+                        <div>
+                            <div class="text-white font-medium mb-1">Điều khiển tốc độ</div>
+                            <p class="text-sm text-zinc-500">Remote chỉnh tốc độ xoay linh hoạt.</p>
+                        </div>
+                        <div>
+                            <div class="text-white font-medium mb-1">Dễ dàng lắp đặt</div>
+                            <p class="text-sm text-zinc-500">Setup trong 5 phút, có case đựng.</p>
+                        </div>
+                        <div>
+                            <div class="text-white font-medium mb-1">Bảo hành 12 tháng</div>
+                            <p class="text-sm text-zinc-500">Hỗ trợ kỹ thuật trọn đời.</p>
+                        </div>
+                    </div>
+
+                    <a href="#quote" class="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-500 transition-colors shadow-lg shadow-blue-900/20">
+                        Liên hệ mua ngay
+                        <iconify-icon icon="solar:cart-large-minimalistic-linear"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center text-center p-6 bg-zinc-900/50 rounded-2xl border border-white/5 backdrop-blur hover:bg-zinc-800/50 transition-colors">
+                    <iconify-icon icon="solar:camera-square-linear" class="text-4xl text-purple-400 mb-4"></iconify-icon>
+                    <h4 class="text-white font-medium mb-2">Thiết bị hiện đại</h4>
+                    <p class="text-xs text-zinc-500">GoPro đời mới nhất, hình ảnh sắc nét 4K.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 bg-zinc-900/50 rounded-2xl border border-white/5 backdrop-blur hover:bg-zinc-800/50 transition-colors">
+                    <iconify-icon icon="solar:users-group-rounded-linear" class="text-4xl text-blue-400 mb-4"></iconify-icon>
+                    <h4 class="text-white font-medium mb-2">Đội ngũ chuyên nghiệp</h4>
+                    <p class="text-xs text-zinc-500">Kỹ thuật viên nhiệt tình, hỗ trợ khách hàng tối đa.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 bg-zinc-900/50 rounded-2xl border border-white/5 backdrop-blur hover:bg-zinc-800/50 transition-colors">
+                    <iconify-icon icon="solar:clock-circle-linear" class="text-4xl text-green-400 mb-4"></iconify-icon>
+                    <h4 class="text-white font-medium mb-2">Setup thần tốc</h4>
+                    <p class="text-xs text-zinc-500">Luôn đến sớm, lắp đặt nhanh gọn.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 bg-zinc-900/50 rounded-2xl border border-white/5 backdrop-blur hover:bg-zinc-800/50 transition-colors">
+                    <iconify-icon icon="solar:map-point-linear" class="text-4xl text-orange-400 mb-4"></iconify-icon>
+                    <h4 class="text-white font-medium mb-2">Phủ sóng toàn quốc</h4>
+                    <p class="text-xs text-zinc-500">Có mặt tại Hà Nội, TP.HCM và các tỉnh lân cận.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Logos / Stats -->
+    <section class="py-12 border-y border-white/5 bg-black" id="projects">
+        <div class="container mx-auto px-6">
+             <p class="text-center text-zinc-500 text-sm mb-8 uppercase tracking-widest">Được tin tưởng bởi</p>
+             <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                 <!-- Logo Placeholders using Text for Demo -->
+                 <span class="text-xl font-bold tracking-tight text-white">VIETCOMBANK</span>
+                 <span class="text-xl font-bold tracking-tight text-white">SAMSUNG</span>
+                 <span class="text-xl font-bold tracking-tight text-white">TIKTOK</span>
+                 <span class="text-xl font-bold tracking-tight text-white">HEINEKEN</span>
+                 <span class="text-xl font-bold tracking-tight text-white">SHOPEE</span>
+             </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-24 bg-zinc-900/30" id="blog">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-medium text-white tracking-tight mb-12">Kinh nghiệm tổ chức sự kiện</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article class="group cursor-pointer">
+                    <div class="aspect-video bg-zinc-800 rounded-xl mb-4 overflow-hidden">
+                        <div class="w-full h-full bg-zinc-700 group-hover:scale-105 transition-transform duration-500"></div>
+                    </div>
+                    <div class="text-purple-400 text-xs font-medium mb-2 uppercase">Tips</div>
+                    <h3 class="text-lg font-medium text-white mb-2 group-hover:text-purple-400 transition-colors">Tại sao Video Booth 360 là xu hướng Year End Party 2024?</h3>
+                    <p class="text-sm text-zinc-500 line-clamp-2">Khám phá lý do tại sao các doanh nghiệp chuyển từ photobooth truyền thống sang video 360...</p>
+                </article>
+                 <!-- Article 2 -->
+                 <article class="group cursor-pointer">
+                    <div class="aspect-video bg-zinc-800 rounded-xl mb-4 overflow-hidden">
+                        <div class="w-full h-full bg-zinc-700 group-hover:scale-105 transition-transform duration-500"></div>
+                    </div>
+                    <div class="text-blue-400 text-xs font-medium mb-2 uppercase">Guide</div>
+                    <h3 class="text-lg font-medium text-white mb-2 group-hover:text-blue-400 transition-colors">Quy trình thuê 360 Booth chuyên nghiệp cần biết</h3>
+                    <p class="text-sm text-zinc-500 line-clamp-2">Những lưu ý về không gian, ánh sáng và kịch bản quay để có video đẹp nhất.</p>
+                </article>
+                 <!-- Article 3 -->
+                 <article class="group cursor-pointer">
+                    <div class="aspect-video bg-zinc-800 rounded-xl mb-4 overflow-hidden">
+                        <div class="w-full h-full bg-zinc-700 group-hover:scale-105 transition-transform duration-500"></div>
+                    </div>
+                    <div class="text-green-400 text-xs font-medium mb-2 uppercase">Tech</div>
+                    <h3 class="text-lg font-medium text-white mb-2 group-hover:text-green-400 transition-colors">So sánh Bục xoay 360 độ các loại trên thị trường</h3>
+                    <p class="text-sm text-zinc-500 line-clamp-2">Phân biệt các loại động cơ, kích thước bàn đứng và độ ổn định.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section class="py-24 relative" id="quote">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-purple-900/20 pointer-events-none"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto bg-zinc-900 border border-zinc-800 p-8 md:p-12 rounded-3xl shadow-2xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-medium text-white tracking-tight mb-4">Nhận báo giá chi tiết</h2>
+                    <p class="text-zinc-400">Để lại thông tin, ZINESS sẽ tư vấn gói dịch vụ phù hợp nhất trong 15 phút.</p>
+                </div>
+
+                <form class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-zinc-300">Họ và tên</label>
+                            <input type="text" placeholder="Nguyễn Văn A" class="w-full bg-black border border-zinc-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-zinc-700">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-zinc-300">Số điện thoại</label>
+                            <input type="tel" placeholder="09xxxxxxx" class="w-full bg-black border border-zinc-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-zinc-700">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                         <div class="space-y-2">
+                            <label class="text-sm font-medium text-zinc-300">Loại sự kiện</label>
+                            <select class="w-full bg-black border border-zinc-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all">
+                                <option>Year End Party</option>
+                                <option>Đám cưới (Wedding)</option>
+                                <option>Sinh nhật</option>
+                                <option>Khai trương / Brand Launch</option>
+                                <option>Mua thiết bị</option>
+                                <option>Khác</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm font-medium text-zinc-300">Ngày dự kiến</label>
+                            <input type="date" class="w-full bg-black border border-zinc-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all [color-scheme:dark]">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-zinc-300">Địa điểm tổ chức / Ghi chú</label>
+                        <textarea rows="3" placeholder="Ví dụ: Khách sạn Marriott Hà Nội, cần gói Pro..." class="w-full bg-black border border-zinc-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-zinc-700"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg text-white font-medium text-lg tracking-wide hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] transition-all transform hover:-translate-y-1">
+                        Gửi yêu cầu báo giá
+                    </button>
+                    <p class="text-center text-xs text-zinc-600 mt-4">Cam kết bảo mật thông tin khách hàng 100%</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-zinc-900 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="text-2xl tracking-tight font-medium text-white flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center text-xs font-bold">Z</div>
+                        ZINESS PRODUCTION
+                    </a>
+                    <p class="text-zinc-500 text-sm max-w-sm mb-6 leading-relaxed">
+                        Đơn vị hàng đầu về giải pháp hình ảnh tương tác tại Việt Nam. Mang công nghệ Video Booth 360 chuẩn quốc tế đến sự kiện của bạn.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"><iconify-icon icon="solar:facebook-linear" width="20"></iconify-icon></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"><iconify-icon icon="solar:instagram-linear" width="20"></iconify-icon></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:text-white hover:bg-zinc-800 transition-colors"><iconify-icon icon="solar:videocamera-linear" width="20"></iconify-icon></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-medium mb-4">Dịch vụ</h4>
+                    <ul class="space-y-2 text-sm text-zinc-500">
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Thuê Video Booth 360</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Mua Bục Xoay 360</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Photobooth Chụp Lấy Ngay</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Quay phim sự kiện</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-medium mb-4">Liên hệ</h4>
+                    <ul class="space-y-2 text-sm text-zinc-500">
+                        <li class="flex items-start gap-2">
+                            <iconify-icon icon="solar:phone-linear" class="mt-0.5"></iconify-icon>
+                            079 359 2018
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <iconify-icon icon="solar:letter-linear" class="mt-0.5"></iconify-icon>
+                            contact@ziness.vn
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <iconify-icon icon="solar:map-point-linear" class="mt-0.5"></iconify-icon>
+                            Hà Nội &amp; TP. Hồ Chí Minh
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-600">
+                <p>© 2024 Ziness Production. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-zinc-400">Điều khoản sử dụng</a>
+                    <a href="#" class="hover:text-zinc-400">Chính sách bảo mật</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Action Buttons (Mobile) -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <a href="https://zalo.me/0793592018" target="_blank" class="w-14 h-14 rounded-full bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-900/50 hover:scale-110 transition-transform cursor-pointer relative group">
+            <span class="absolute right-full mr-3 bg-zinc-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Chat Zalo</span>
+            <span class="font-bold text-xs">Zalo</span>
+        </a>
+        <a href="tel:0793592018" class="w-14 h-14 rounded-full bg-white flex items-center justify-center text-black shadow-lg hover:scale-110 transition-transform cursor-pointer shimmer relative group">
+            <span class="absolute right-full mr-3 bg-zinc-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Gọi ngay</span>
+            <iconify-icon icon="solar:phone-calling-linear" width="24"></iconify-icon>
+        </a>
+    </div>
+
+
+</body></html>
